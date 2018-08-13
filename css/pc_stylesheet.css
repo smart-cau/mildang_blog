@@ -1,0 +1,70 @@
+@media screen and (min-width : 870px){
+    /* profile 부분 */
+
+	.profile-pic{
+		background-color: #111;
+        width: 100%;
+        
+	}
+
+	.profile-pic img{
+		position: relative;
+		left: 50%;
+        transform: translate(-50%, 0);
+        margin: 0 auto;
+        width: 70%;
+        height: 70vh;
+    }
+    .blog-name{
+		margin-left: 1.5rem;
+    }
+    
+    /* #my-life */
+    .vertical-column{
+        flex-basis: 10%;
+        line-height: 6em;
+        padding-top: 10%;
+    }
+
+    .writing-content{
+        flex-basis: 50%;
+    }
+
+    .image-wrapper{
+        flex-basis: 40%;
+        margin-top: 8em;
+        /* position: absolute; */
+        /* left: 50%; */
+    }
+
+    .my-life{
+        height: 85vh;
+    }
+
+
+    .challenge, .confidence{
+        height: 105vh;
+    }
+
+    .fail{
+        height: 63vh;
+    }
+
+    #contact{
+        width: 100%;
+    }
+
+    .align-center{
+        position: absolute;
+        
+        left: 50%;
+        z-index: 9999;
+        transform: translateX(-50%); 
+        /* margin: 0 auto; */
+    }
+    
+}
+
+@media screen and (min-width : 570px){
+
+}

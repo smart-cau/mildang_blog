@@ -1,0 +1,468 @@
+ /* https://www.w3schools.com/css/css3_mediaqueries_ex.asp
+ 미디어 쿼리 w3 school. */
+    /* https://www.w3schools.com/css/tryit.asp?filename=trycss_mediaqueries_ex2 
+    float을 활용한 미디어쿼리 레이아웃 꽤 쓸만해 보이는 예제. 구버전 IE에 사용 굿*/
+
+    /* https://www.w3schools.com/css/tryit.asp?filename=trycss_mediaqueries_flex
+    flex를 활용한 미디어쿼리 레이아웃 예제. 이렇게 하자. */
+    /* 이는 아래와 같다. */
+/* Container for flexboxes */
+
+/* 한글폰트 */
+    body{
+        font-family: 'RixGo L', sans-serif;
+    }
+
+    h1, h2{
+        font-family: 'RixGo B';
+    }
+
+    #mask {  
+        position:absolute;  
+        z-index:9000;  
+        background-color:#000;  
+        display:none;  
+        left:0;
+        top:0;
+      }
+      .window{
+        display: none;
+        position:absolute;  
+        left:100px;
+        top:100px;
+        z-index:10000;
+      }
+/* On screens that are 600px wide or less, make the columns
+ stack on top of each other instead of next to each other */
+    #contents{
+        overflow: hidden;
+    }
+
+/* flex classes */
+    .flex-box {        
+        display: flex;
+           
+    }
+
+    .flex-wrap{
+        flex-wrap: wrap;
+    }
+
+    .flex-column{
+        flex-direction: column;
+    }
+
+    .title-basis{
+        flex-basis: 17%;
+    }
+
+    .row-reverse{
+        flex-direction: row-reverse;
+    }
+/* flex classes end */
+
+
+
+/* background colors */
+    .bg-black{
+        background-color: black;
+    }
+/* backgorund colors end */
+
+
+
+
+/* classes from bootstrap */
+/* text */
+    .inline-block{
+        display: inline-block;
+    }
+    .text-left{
+            text-align: left;
+    }
+
+    .text-right{
+            text-align: right;
+    }
+
+    .text-center{
+            text-align: center;
+    }
+
+    .text-justified{
+            text-align: justify; /*양쪽정렬*/
+    }
+    /* text-align 주의사항!
+        1. block요소에만 text-align속성을 적용할 수 있다. (즉 text-align은 p태그에 거는 것이 아니라 위에 있는 div에 먹이는거임.)
+        2. 그렇지만 정렬되는 것은 block요소 안에 있는 inline요소만 가능하다.
+        3. 2번에서 inline요소란, text뿐만 아니라 image 등도 포함한다. (img 자체가 inline요소임.)
+    */
+    .text-lowercase{
+            text-transform: lowercase;
+    }
+
+    .text-uppercase{
+            text-transform: uppercase;
+    }
+
+    .bold{
+        font-family: 'RixGo B'
+    }
+
+    .font-small{
+        font-size: 0.7rem;
+    }
+    
+    .font-medium{
+        font-size: 1rem;
+    }
+
+    .color-white{
+        color: white;
+    }
+
+    .blog-name{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.5rem;
+        margin-left: 0.7rem
+    }
+
+/* images */
+    img{
+            vertical-align: center;
+    }
+    .img-responsive{
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .img-thumbnail{
+            display: inline-block;
+            max-width: 100%;
+            height: auto;
+            padding: 4px;
+            line-height: 1.42857143;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+    }
+
+    .img-circle{
+            border-radius: 50%;
+    }
+
+        /* The slide show that I want is called 'carousel'!
+        and it is the link. https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_carousel&stacked=h */
+/* images end */
+
+
+
+/* position */
+.relative{
+    position: relative;
+}
+
+.absolute{
+    position: absolute;
+}
+
+.left{
+    left: 0;
+}
+
+.right{
+    right: 0;
+}
+
+
+
+/* special classes */
+    .height100{
+        height: 100%;
+    }
+
+    .vertical-writing{
+        writing-mode: vertical-lr;
+    }
+
+    .margin-lr-auto{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+/* special classes end */
+
+.my-life{
+    height: 40rem;
+}
+
+.challenge{
+    height: 60rem;
+}
+
+.confidence{
+    height: 60rem;
+}
+
+.fail{
+    height: 20rem;
+}
+    
+/* .row {
+    flex-direction: column;
+    } */
+#contents{
+    width: 100%;
+    min-width: 100%;
+    
+}
+
+.column{
+    padding: 20px;
+}
+
+.flex-container{
+    height: 100vh;
+}
+
+
+/* .container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+.title-height{
+    min-height: 22rem; /*약 400px*/
+}
+
+.title-width{
+    min-width: 1em;
+}
+
+.jumbotron{
+    color: inherit;
+    background-color: #eee;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    /* padding 값들은 device 크기에 따라 달라짐. 내가 보고 예뻐보이는거 고르면 됨.  */
+}
+
+/* ----------------------------------------------------------------------- */
+/* ------------------------본격적인 내용시작-------------------------------- */
+/* ----------------------------------------------------------------------- */
+
+
+.container{
+    width: 100%;
+    padding: 2em;
+}
+
+.my-name::before{
+    content: ' ';
+    display: inline-block;
+    width: .25em;
+    height: .25em;
+    border-radius: 50%;
+    background-color: #000;
+    vertical-align: top;
+    margin-top: 0.5em;
+    margin-right: 0.2em;
+}
+
+.my-name{
+    margin-bottom: 0.6em;
+}
+#profile .container h4{
+    line-height: 1.9em;
+}
+
+.line-short-long{
+    width: 100%;
+    height: 1em;
+    position: relative;
+    z-index: 1;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.line-short-long::before{
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 40%;
+    /* height: 1em; */
+    border-top: #000000 solid 2px;
+}
+
+.line-short-long::after{
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 60%;
+    /* height: 60%; */
+    border-bottom: gray solid 2px;
+}
+
+.line-long-short{
+    width: 100%;
+    height: 1em;
+    position: relative;
+    z-index: 1;
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+}
+
+.line-long-short::before{
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 60%;
+    /* height: 1em; */
+    border-top: #000000 solid 2px;
+}
+
+.line-long-short::after{
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 40%;
+    /* height: 60%; */
+    border-bottom: gray solid 2px;
+}
+
+
+.vertical-column{
+    position: relative;
+    flex-basis: 15%;
+    /* height: 40rem; */
+    background-color: black;
+
+    line-height: 4em;
+    letter-spacing: 4em;
+    vertical-align: top;
+
+    padding-top: 15%;
+
+    z-index: -100;
+}
+
+.border-box{
+    box-sizing: border-box;
+}
+
+.writing-content{
+    box-sizing: border-box;
+    flex-basis: 75%;
+    padding: 5em 2em;
+    font-size: 1.2rem;
+}
+.writing-content p {
+    margin-bottom: 1em;
+}
+
+.image-wrapper{
+    flex-basis: 85%;
+}
+
+.writing-content h3::before{
+    content: ' ';
+    display: inline-block;
+    width: .25em;
+    height: .25em;
+    border-radius: 50%;
+    background-color: #000;
+    vertical-align: top;
+    margin-top: 0.5em;
+    margin-right: 0.2em;
+}
+
+.writing-content h3{
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.contact{
+    margin-bottom: 1.5rem;
+}
+
+.contact-container{
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-list::before{
+    content: ' ';
+    display: inline-block;
+    width: .25em;
+    height: .25em;
+    border-radius: 50%;
+    background-color: #000;
+    vertical-align: top;
+    margin-top: 0.5em;
+    margin-right: 0.2em;
+}
+
+.sns-logo{
+    width: 6rem;
+    height: 6rem;
+}
+
+.asked-logo{
+    border-radius: 10%;
+    width: 4rem;
+    height: 4rem
+}
+
+
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+/* @media screen and (min-width: 600px) {  
+    .column {
+        flex-basis: 50%;
+        flex-grow: 4;
+    }
+} */
+/* 
+@media screen and (min-width: 1196px){
+
+    Create four equal columns
+    .column {
+        flex-basis: 25%;
+        padding: 20px;
+    }
+
+} */
+
+
+
+
+
+
+
+
+

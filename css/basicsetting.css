@@ -1,0 +1,58 @@
+            /*---------초기화 코드--------*/
+            * {
+                margin :0;
+                padding: 0;
+                box-sizing: border-box;
+                font-size: 1rem;
+            }
+    
+            body {
+                font-family: 'Times New Roman', serif;
+               
+            }
+    
+            li {
+                list-style: none;
+            }
+    
+            a {
+                text-decoration: none;
+            }
+    
+            img {
+                border : 0;
+            }
+            
+            h1{
+                font-size: 3rem;
+            }
+    
+            h2{
+                font-size: 2.1rem;
+            }
+    
+            h3{
+                font-size: 1.8rem;
+            }
+    
+            h4{
+                font-size: 1.4rem;
+            }
+    
+            h5{
+                font-size: 1.125rem;
+            }
+    
+            h6{
+                font-size: 1rem;
+            }
+    
+            
+    
+            h1, h2, h3, h4, h5, h6{
+                font-family: inherit;
+                color: inherit;
+                font-weight: 400;
+                /* line-height: 1.1; */
+            }
+            /*-----------------*/
