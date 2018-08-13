@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  console.log($(".navlist li"));
+  console.log($(window).height());
 
   /************************ to highlight on which section you are ****************/
 

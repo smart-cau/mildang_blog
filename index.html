@@ -24,6 +24,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/mainjs.js"></script>
     <script src="js/jquery.bxslider.js"></script>
+    <script src="js/prefixfree.js"></script>
 
 </head>
 
@@ -54,8 +55,8 @@
         </div>
 		<!------------------------------- NAV ENDS ---------------------->
 
-        <!-- nav bar 닫는 역할!(임시) -->
-        <div style="width: 100%; height: 1000vh; margin-top: 50px;" class="close" id="contents">
+        <!-- nav bar 닫는 역할!(임시) height: 1000vh;-->
+        <div style="width: 100%; margin-top: 50px;" class="close" id="contents">
 
             <section id="profile">
                 <div class="profile-pic">
@@ -186,7 +187,7 @@
                                     <img src="images/my_photo/me_2015_2.jpg" alt="">
                                 </div>
                                 <div>
-                                    <img src="images/my_photo/me_nz_festv.JPG" alt="">
+                                    <img src="images/my_photo/me_2018_grouppic.JPG" alt="">
                                 </div>
                                 <div>
                                     <img src="images/my_photo/me_nz_hi.JPG" alt="">
@@ -235,7 +236,8 @@
                 <h4>
                     "You can't connect the dots looking forward. you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future.
                     You have to trust in something - your gut, destiny, life, karma, whatever.
-                    This approach has never let me down, and it has made all the difference in my life." - Steve Jobs.
+                    This approach has never let me down, and it has made all the difference in my life." <br>
+                    - Steve Jobs.
                 </h4>
             </div>
 
@@ -243,7 +245,7 @@
 
 
             <section id="contact" class="relative">
-                <div class="container">
+                <div class="container contact-height">
                     <div class="align-center">
                             <h2 class="contact">
                                     CONTACT
@@ -294,6 +296,10 @@
                                                 
             </section>
 
+            <footer>
+                <p>&#169; copyright by 심리밀당남 and heech </p>
+            </footer>
+
         </div>
 
     
@@ -323,13 +329,15 @@
             // 화면 사이즈가 변하면 slider를 reload하는 코드.
             var mql = window.matchMedia("screen and (max-width: 768px)");
             mql.addListener(function(e) {
-            if(!e.matches) {
-                slider.reloadSlider();
-            }
-    });
+                if(!e.matches) {
+                    slider.reloadSlider();
+                }
+            });
+            $('.close').val($(window).height()+500);
+            
         });
         //]]>
-        </script>
+    </script>
 </body>
 
 </html>

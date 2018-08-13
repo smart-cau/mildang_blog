@@ -18,12 +18,13 @@
     .blog-name{
 		margin-left: 1.5rem;
     }
-    
+    /* line-height, letter-spacing이 사파리에서 지원 안되나?? */
     /* #my-life */
     .vertical-column{
         flex-basis: 10%;
-        line-height: 6em;
-        padding-top: 10%;
+        line-height: 7em;
+        padding-top: 5%;
+        letter-spacing: 3em;
     }
 
     .writing-content{
@@ -47,7 +48,7 @@
     }
 
     .fail{
-        height: 63vh;
+        height: 75vh;
     }
 
     #contact{
@@ -62,7 +63,14 @@
         transform: translateX(-50%); 
         /* margin: 0 auto; */
     }
-    
+
+    .contact-height{
+        height: 33em;
+    }
+
+    #comment{
+        padding: 4em;
+    }
 }
 
 @media screen and (min-width : 570px){

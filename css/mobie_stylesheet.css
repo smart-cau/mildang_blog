@@ -438,6 +438,19 @@
     height: 4rem
 }
 
+footer{
+    width: 100%;
+    background-color: gray;
+    text-align: center;
+    color: white;
+    padding: 1em;
+    margin-top: 1em;
+}
+
+#comment{
+    padding: 1.5em;
+}
+
 
 
 /* On screens that are 992px wide or less, go from four columns to two columns */
