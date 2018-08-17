@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  console.log($(window).height());
+  // console.log($(window).height());
 
   /************************ to highlight on which section you are ****************/
 
@@ -13,7 +13,7 @@ $(document).ready(function() {
   /********************* highlight active link when scrolled **************************/
 
   $(window).scroll(function() {
-    console.log($(this).scrollTop());
+    // console.log($(this).scrollTop());
     $(".page").each(function() {
       var sectionoffset = $(this.hash).offset().top; // saves dist of that hash trom top
       if (sectionoffset <= $(this).scrollTop()) {
@@ -24,7 +24,7 @@ $(document).ready(function() {
 
   /**************** to change from trans to black when scrolled *************/
 
-  console.log($(document).scrollTop());
+  // console.log($(document).scrollTop());
 
   $(document).scroll(function() {
     if ($(document).scrollTop() > 95) {
@@ -58,23 +58,6 @@ $(document).ready(function() {
       // $(".toggleMenu").css("padding", "15px 20px 15px 15px");  ----이 부분 때문에 메뉴 아이콘 크기가 변함
     }
   });
-
-  function wrapWindowByMask() {
-    //화면의 높이와 너비를 구한다.
-    var maskHeight = $(document).height();
-    var maskWidth = $(window).width();
-    console.log(`높이 : ${maskHeight}`);
-
-    //마스크의 높이와 너비를 화면 것으로 만들어 전체 화면을 채운다.
-    $(".close").css({ width: maskWidth, height: maskHeight });
-
-    //애니메이션 효과 - 일단 1초동안 까맣게 됐다가 80% 불투명도로 간다.
-    $("#mask").fadeIn(1000);
-    $("#mask").fadeTo("slow", 0.8);
-
-    //윈도우 같은 거 띄운다.
-    $(".window").show();
-  }
 
   //검은 막 띄우기
   $(".openMask").click(function(e) {
